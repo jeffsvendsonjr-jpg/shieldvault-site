@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - ShieldVault</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: #1a1a2e;
+            background: #f8f9fa;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a2e;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        h2 {
+            font-size: 1.25rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #1a1a2e;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: #444;
+        }
+        ul {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.75rem;
+            color: #444;
+        }
+        .contact-box {
+            background: #f0f7ff;
+            border: 1px solid #d0e0ff;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .contact-box a {
+            color: #4c6fff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+        }
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+        .contact-box p {
+            margin-bottom: 0.5rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .faq-item {
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .faq-item h3 {
+            font-size: 1rem;
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+        }
+        .faq-item p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+        a {
+            color: #4c6fff;
+        }
+        .github-link {
+            display: inline-block;
+            background: #1a1a2e;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+        .github-link:hover {
+            background: #2a2a4e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Support</h1>
+        <p class="subtitle">ShieldVault Browser Extension</p>
+
+        <div class="contact-box">
+            <p>Need help? Have a question?</p>
+            <a href="mailto:support@shieldvault.site">support@shieldvault.site</a>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>How do I know ShieldVault is working?</h3>
+            <p>Click the ShieldVault icon in your browser toolbar. If protection is active, you'll see "Proofs of Prevention" showing any blocked secrets. You can also test by pasting a fake API key pattern like <code>sk-test1234567890abcdefghij</code> into a supported chat.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Which sites does ShieldVault protect?</h3>
+            <p>ShieldVault currently protects: ChatGPT (chat.openai.com, chatgpt.com), Claude (claude.ai), Gemini (gemini.google.com), Perplexity (perplexity.ai), and Microsoft Copilot (copilot.microsoft.com).</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Does ShieldVault store my secrets?</h3>
+            <p>No. ShieldVault never stores, logs, or transmits the actual content of detected secrets. It only keeps session-only metadata (type of secret detected, domain, timestamp) that disappears when you close your browser.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Why was my text blocked when it wasn't a secret?</h3>
+            <p>ShieldVault uses pattern matching that may occasionally flag text that resembles API key formats. This is intentional—we err on the side of caution. If you're confident the text is safe, you can retype it character by character to bypass detection.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I disable ShieldVault temporarily?</h3>
+            <p>Yes. Click the extension icon in Chrome, then go to "Manage Extensions" and toggle ShieldVault off. Remember to turn it back on when you're done.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>ShieldVault isn't blocking secrets on a site</h3>
+            <p>Make sure you're on one of the supported sites listed above. If you are and it's still not working, try refreshing the page or reinstalling the extension. If the issue persists, contact us.</p>
+        </div>
+
+        <h2>Report a Bug</h2>
+        <p>Found a bug or have a feature request? You can:</p>
+        <ul>
+            <li>Email us at <a href="mailto:support@shieldvault.site">support@shieldvault.site</a></li>
+            <li>Open an issue on GitHub</li>
+        </ul>
+
+        <a href="https://github.com/yourusername/shieldvault/issues" class="github-link">Report on GitHub →</a>
+
+        <h2>Response Time</h2>
+        <p>We aim to respond to all support requests within 48 hours. For urgent security issues, please include "URGENT" in your email subject line.</p>
+    </div>
+</body>
+</html>
