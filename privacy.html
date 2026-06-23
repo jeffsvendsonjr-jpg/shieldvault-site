@@ -16,7 +16,6 @@
       background: #ffffff;
     }
 
-```
 h1 {
   font-size: 32px;
   margin-bottom: 8px;
@@ -105,8 +104,6 @@ hr {
   border-top: 1px solid #e5e7eb;
   margin: 32px 0;
 }
-```
-
   </style>
 </head>
 <body>
@@ -116,14 +113,14 @@ hr {
 
   <div class="callout">
     <h3 style="margin-top:0">In plain English</h3>
-    <p>ShieldVault watches what you type or paste on certain websites and warns you when it spots something sensitive — like an API key or a heated message — before you send it. <strong>The text being checked never leaves your device.</strong></p>
-    <p>Settings and a log of detection events are saved locally on your computer so the extension remembers them between sessions. That log contains metadata only, such as the website, time, and detection type. It never stores the actual text.</p>
-    <p>If you activate a paid Pro subscription, ShieldVault contacts <code>shieldvault.site</code> only to verify your license key. If you choose to upgrade, ShieldVault may open a checkout page hosted by ShieldVault and processed by Stripe.</p>
+    <p>ShieldVault watches what you type or paste on certain websites and warns you when it spots something sensitive — like an API key or a heated message — before you send it. <strong>The text is analyzed locally on your device and is not transmitted to ShieldVault.</strong></p>
+    <p>Settings and a log of detection events are saved locally on your computer so the extension remembers them between sessions. That log contains metadata only, such as the website, time, and detection category — not the sensitive text itself.</p>
+    <p>If you activate a paid Pro subscription, ShieldVault contacts <code>shieldvault.site</code> only to verify your license key. If you choose to upgrade, ShieldVault may open a checkout page hosted by ShieldVault that uses Stripe to process payment.</p>
     <p style="font-style:italic;color:#6b7280">If that's all you needed to know, you're done. Everything below is the long version with technical details.</p>
   </div>
 
   <h2>What ShieldVault analyzes locally</h2>
-  <p>ShieldVault is built on a "detection without possession" principle. The extension analyzes text you type or paste in real time to detect sensitive content — API keys, credentials, confidential markers, and emotionally charged language — and warns you before that content is sent. The text being analyzed never leaves your device.</p>
+  <p>ShieldVault is built on a "detection without possession" principle. The extension analyzes text you type or paste in real time to detect sensitive content — API keys, credentials, confidential information, and risky messages — before that content is sent anywhere.</p>
 
   <p>ShieldVault inspects text you type or paste into input fields on these websites:</p>
   <ul>
@@ -132,15 +129,15 @@ hr {
     <li><strong>Social and professional:</strong> LinkedIn, Reddit, Twitter / X</li>
   </ul>
 
-  <p>The analysis runs entirely on your device using local pattern matching. The text being analyzed is never transmitted, stored, or shared. After analysis completes, the text is discarded from extension memory.</p>
+  <p>The analysis runs entirely on your device using local pattern matching. The text being analyzed is never transmitted, stored, or shared. After analysis completes, the text is discarded from the extension's working memory.</p>
 
   <h2>What is stored locally on your device</h2>
-  <p>ShieldVault uses Chrome's local extension storage (<code>chrome.storage.local</code>) to remember the following information across browser sessions. This information stays on your device and is never sent to any server:</p>
+  <p>ShieldVault uses Chrome's local extension storage (<code>chrome.storage.local</code>) to remember the following information across browser sessions. This information stays on your device and is not sent to ShieldVault:</p>
 
   <ul>
     <li>Your preferences, including which detection categories you have enabled or disabled</li>
     <li>Lifetime statistics, including total secrets blocked, total behavioral warnings, and the date you first installed the extension</li>
-    <li>A local activity log of recent detection events containing only metadata: the website domain, the time, the detection category, and whether the action was a paste, type, or submit. <strong>The actual content of any detected text is never stored.</strong></li>
+    <li>A local activity log of recent detection events containing only metadata: the website domain, the time, the detection category, and whether the action was a paste, type, or submit. <strong>No message text, secrets, or content are stored in that log.</strong></li>
     <li>Your weekly behavioral catch count and the current week identifier, used to enforce the free tier's weekly behavioral catch limit</li>
     <li>A daily repeat-offender counter to provide additional warnings if the same type of secret is blocked multiple times in one day</li>
     <li>If you activate a Pro subscription, your license key string and Pro status flag</li>
@@ -153,7 +150,7 @@ hr {
 
   <p>ShieldVault makes automatic network requests only for <strong>license verification</strong>.</p>
 
-  <p>When you activate a Pro subscription using a license key, the extension sends the license key string to ShieldVault's verification endpoint (<code>https://shieldvault.site/api/license/verify</code>). The server confirms whether the key is valid and returns a yes-or-no response. The same verification call may run when the extension loads, to confirm that an existing Pro activation is still valid.</p>
+  <p>When you activate a Pro subscription using a license key, the extension sends the license key string to ShieldVault's verification endpoint (<code>https://shieldvault.site/api/license/verify</code>) to confirm that the key is valid.</p>
 
   <p>These license verification requests transmit only the license key. No browsing data, no detected text, no detection events, no usage statistics, and no personally identifying information are transmitted with the request.</p>
 
@@ -195,7 +192,7 @@ hr {
 
   <div class="footer-meta">
     <p><strong>Last updated:</strong> June 2026</p>
-    <p><strong>Applies to:</strong> ShieldVault v1.5.1 and later</p>
+    <p><strong>Applies to:</strong> ShieldVault v1.7.1 and later</p>
   </div>
 
 </body>
